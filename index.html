@@ -123,33 +123,12 @@
   <footer class="site-footer">
     <div class="wrap">
       <span>© <span id="yr">2026</span> RetroGameDev</span>
-      <form class="eo-signup" action="https://eocampaign1.com/form/40503702-626d-11f1-8318-138ed8727a68" method="post" target="eo-frame" aria-label="Newsletter signup">
-        <label class="eo-label" for="eo-email">RetroGameDev updates in your inbox</label>
-        <div class="eo-row">
-          <input id="eo-email" type="email" name="field_0" placeholder="you@email.com" required autocomplete="email">
-          <input type="text" name="hpc4b27b6e-eb38-11e9-be00-06b4694bee2a" class="eo-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <button type="submit">Subscribe</button>
-        </div>
-        <p class="eo-msg" hidden>Thanks! Check your inbox to confirm. &#10022;</p>
-      </form>
-      <iframe name="eo-frame" class="eo-frame" title="signup"></iframe>
+      <div class="eo-embed">
+        <script async src="https://eomail5.com/form/326bc304-6272-11f1-8370-c375dfce4590.js" data-form="326bc304-6272-11f1-8370-c375dfce4590"></script>
+      </div>
     </div>
   </footer>
 
-  <script>
-    document.getElementById('yr').textContent = new Date().getFullYear();
-    document.querySelectorAll('.eo-signup').forEach(function (f) {
-      f.addEventListener('submit', function (e) {
-        e.preventDefault();
-        var done = function () {
-          var r = f.querySelector('.eo-row'); if (r) r.style.display = 'none';
-          var l = f.querySelector('.eo-label'); if (l) l.style.display = 'none';
-          var m = f.querySelector('.eo-msg'); if (m) m.hidden = false;
-        };
-        fetch(f.action, { method: 'POST', body: new FormData(f), headers: { 'Accept': 'application/json' } })
-          .then(done, done);
-      });
-    });
-  </script>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
 </body>
 </html>

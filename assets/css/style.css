@@ -166,25 +166,36 @@ a:hover { color: var(--red); }
 .site-footer .wrap { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
 .site-footer a { text-decoration: none; }
 
-/* ---------- footer email signup ---------- */
-.eo-signup { display: flex; align-items: center; justify-content: flex-end;
-  flex-wrap: wrap; gap: 8px 12px; text-align: right; }
-.eo-label { font-family: var(--font-head); font-weight: 600;
-  font-size: 15px; color: var(--ink); margin: 0; }
-.eo-row { display: flex; gap: 8px; justify-content: flex-end; flex-wrap: wrap; }
-.eo-row input[type="email"] {
-  font-family: var(--font-body); font-size: 16px; padding: 9px 13px; min-width: 190px;
-  border: 2px solid var(--line); border-radius: 11px; background: #fff; color: var(--ink); }
-.eo-row input[type="email"]:focus { outline: none; border-color: var(--teal); }
-.eo-signup button {
-  font-family: var(--font-head); font-weight: 600; font-size: 16px; cursor: pointer;
-  padding: 9px 18px; border-radius: 11px; border: 2px solid var(--red-dk);
-  background: var(--red); color: var(--cream);
-  box-shadow: 3px 3px rgba(150,40,30,.3); transition: transform .06s, box-shadow .06s; }
-.eo-signup button:hover { transform: translate(2px,2px); box-shadow: 1px 1px rgba(150,40,30,.3); }
-.eo-msg { font-family: var(--font-head); font-weight: 600; color: var(--teal-dk); margin: 8px 0 0; }
-.eo-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
-.eo-frame { display: none; }
+/* footer email signup (EmailOctopus embed) — unscoped overrides: EO injects outside our div */
+.eo-embed { width: 100%; max-width: 330px; }
+.emailoctopus-form-wrapper, .emailoctopus-form, .emailoctopus-form .main-form,
+.inline-container, .form-container { margin: 0 !important; padding: 0 !important; background: transparent !important; }
+.form-container { margin-top: 12px !important; }
+[eo-block-container] { margin: 0 !important; padding: 0 !important; min-height: 0 !important; }
+.emailoctopus-success-message, .emailoctopus-error-message { margin: 0 !important; }
+.emailoctopus-form .emailoctopus-form-row, .emailoctopus-form .form-group,
+.emailoctopus-form input[type="submit"] { margin-bottom: 0 !important; }
+.emailoctopus-form input.form-control, .emailoctopus-form input[type="email"] {
+  font-family: var(--font-body) !important; border-radius: 10px !important;
+  border: 2px solid var(--line) !important; color: var(--ink) !important;
+  padding: 7px 11px !important; height: auto !important; line-height: 1.2 !important; }
+.emailoctopus-form input[type="submit"], .emailoctopus-form .btn-primary, .emailoctopus-form button {
+  background: var(--red) !important; border: 2px solid var(--red-dk) !important; color: #fff !important;
+  border-radius: 10px !important; font-family: var(--font-head) !important;
+  padding: 7px 16px !important; height: auto !important; box-shadow: 3px 3px rgba(150,40,30,.3) !important; }
+.mastfoot, [eo-block="powered-by"] { margin: 2px 0 0 !important; font-size: 11px !important; }
+.mastfoot p { margin: 0 !important; }
+/* line the input + button up: one row, every wrapper layer locked to 44px, centered */
+.emailoctopus-form .main-form { display: flex !important; align-items: center !important; gap: 8px !important; flex-wrap: nowrap !important; }
+.emailoctopus-form [eo-form-fields-container],
+.emailoctopus-form .emailoctopus-form-row,
+.emailoctopus-form .form-group {
+  flex: 1 1 auto !important; width: 100% !important; height: 44px !important;
+  display: flex !important; align-items: center !important; margin: 0 !important; padding: 0 !important; }
+.emailoctopus-form input.form-control, .emailoctopus-form input[type="email"],
+.emailoctopus-form input[type="submit"], .emailoctopus-form .btn-primary {
+  height: 44px !important; box-sizing: border-box !important; margin: 0 !important; vertical-align: middle !important; }
+.emailoctopus-form input.form-control, .emailoctopus-form input[type="email"] { width: 100% !important; }
 
 /* ---------- 404 ---------- */
 .bigcode { font-family: var(--font-pixel); font-weight: 700; font-size: clamp(28px, 6vw, 52px);
@@ -197,6 +208,4 @@ a:hover { color: var(--red); }
   .nav a { font-size: 15px; }
   .brand { font-size: 17px; }
   .site-footer .wrap { justify-content: center; text-align: center; }
-  .eo-signup { text-align: center; }
-  .eo-row { justify-content: center; }
 }

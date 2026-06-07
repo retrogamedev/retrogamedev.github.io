@@ -162,9 +162,29 @@ a:hover { color: var(--red); }
 
 /* ---------- site footer ---------- */
 .site-footer { border-top: 2px solid var(--line); background: rgba(255,250,240,.5);
-  padding: 26px 0; margin-top: 0; font-size: 16px; color: var(--ink-soft); }
-.site-footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  padding: 16px 0; margin-top: 0; font-size: 16px; color: var(--ink-soft); }
+.site-footer .wrap { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
 .site-footer a { text-decoration: none; }
+
+/* ---------- footer email signup ---------- */
+.eo-signup { display: flex; align-items: center; justify-content: flex-end;
+  flex-wrap: wrap; gap: 8px 12px; text-align: right; }
+.eo-label { font-family: var(--font-head); font-weight: 600;
+  font-size: 15px; color: var(--ink); margin: 0; }
+.eo-row { display: flex; gap: 8px; justify-content: flex-end; flex-wrap: wrap; }
+.eo-row input[type="email"] {
+  font-family: var(--font-body); font-size: 16px; padding: 9px 13px; min-width: 190px;
+  border: 2px solid var(--line); border-radius: 11px; background: #fff; color: var(--ink); }
+.eo-row input[type="email"]:focus { outline: none; border-color: var(--teal); }
+.eo-signup button {
+  font-family: var(--font-head); font-weight: 600; font-size: 16px; cursor: pointer;
+  padding: 9px 18px; border-radius: 11px; border: 2px solid var(--red-dk);
+  background: var(--red); color: var(--cream);
+  box-shadow: 3px 3px rgba(150,40,30,.3); transition: transform .06s, box-shadow .06s; }
+.eo-signup button:hover { transform: translate(2px,2px); box-shadow: 1px 1px rgba(150,40,30,.3); }
+.eo-msg { font-family: var(--font-head); font-weight: 600; color: var(--teal-dk); margin: 8px 0 0; }
+.eo-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.eo-frame { display: none; }
 
 /* ---------- 404 ---------- */
 .bigcode { font-family: var(--font-pixel); font-weight: 700; font-size: clamp(28px, 6vw, 52px);
@@ -176,4 +196,7 @@ a:hover { color: var(--red); }
   .nav { gap: 16px; }
   .nav a { font-size: 15px; }
   .brand { font-size: 17px; }
+  .site-footer .wrap { justify-content: center; text-align: center; }
+  .eo-signup { text-align: center; }
+  .eo-row { justify-content: center; }
 }

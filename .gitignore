@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor cruft
+*.swp
+*~
+.idea/
+.vscode/
+
+# Local server / logs
+*.log

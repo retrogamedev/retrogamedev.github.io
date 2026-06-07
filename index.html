@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RetroGameDev — Bring Your Retro Game Ideas to Life</title>
+  <meta name="description" content="Learn step-by-step how to create your own games for classic retro systems — from the C64 to the PS1. Books, a VR app, and a free hands-on reference hub.">
+  <meta property="og:title" content="RetroGameDev">
+  <meta property="og:description" content="Learn to make games for classic retro systems — C64 through PS1.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://retrogamedev.com">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <nav class="nav">
+        <a href="./" class="active">Home</a>
+        <a href="#products">Products</a>
+        <a href="downloads/">Downloads</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <!-- swap for <img src="assets/img/logo.png" alt="RetroGameDev"> when you drop the file in -->
+        <div class="logo-hero"><span class="l1">RETRO</span><span class="l2">GAME DEV</span></div>
+        <h1>Bring your retro game ideas to life</h1>
+        <p class="tagline">Learn step-by-step how to create your own games for the classics you
+          grew up with — from the C64 to the PS1. Perfect for beginners and enthusiasts alike.</p>
+        <a class="btn" href="#products">See the Books &amp; App</a>
+        <a class="btn ghost" href="downloads/">Book Downloads</a>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section style="padding-top:0;">
+      <div class="wrap">
+        <h2 class="center">What others are saying</h2>
+        <div class="quotes">
+          <p class="quote">RetroGameDev makes a complex subject accessible and fun.</p>
+          <p class="quote">A concise guide packed with everything you need to get started.</p>
+          <p class="quote">Finally, retro game development made easy for everyone.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="products">
+      <div class="wrap">
+        <h2 class="center">Products</h2>
+        <p class="center dim" style="margin-bottom:36px;">Three books and a VR app to take you
+          from your first sprite to shipping a real retro game.</p>
+
+        <div class="grid grid-auto">
+
+          <!-- Book 1 -->
+          <div class="panel card">
+            <span class="tag">BOOK · C64</span>
+            <div class="cover c64"><img src="assets/img/cover-c64.png" alt="RetroGameDev C64 Edition cover"></div>
+            <h3>RetroGameDev C64 Edition</h3>
+            <p>Build a complete game for the Commodore 64, from sprites and scrolling to sound.</p>
+            <div class="actions">
+              <a class="btn" href="https://mybook.to/retrogamedev-c64" target="_blank" rel="noopener">Buy on Amazon</a>
+            </div>
+          </div>
+
+          <!-- Book 2 -->
+          <div class="panel card">
+            <span class="tag">BOOK · C64</span>
+            <div class="cover c64b"><img src="assets/img/cover-c64-v2.png" alt="RetroGameDev C64 Edition Volume 2 cover"></div>
+            <h3>RetroGameDev C64 Edition Vol 2</h3>
+            <p>Go deeper on the C64 — advanced techniques for pushing the hardware further.</p>
+            <div class="actions">
+              <a class="btn" href="https://mybook.to/retrogamedev-c64-v2" target="_blank" rel="noopener">Buy on Amazon</a>
+            </div>
+          </div>
+
+          <!-- Book 3 -->
+          <div class="panel card">
+            <span class="tag">BOOK · NES</span>
+            <div class="cover nes"><img src="assets/img/cover-nes.png" alt="RetroGameDev NES Edition cover"></div>
+            <h3>RetroGameDev NES Edition</h3>
+            <p>Make a game for the Nintendo Entertainment System, 6502 assembly and all.</p>
+            <div class="actions">
+              <a class="btn" href="https://mybook.to/retrogamedev-nes" target="_blank" rel="noopener">Buy on Amazon</a>
+            </div>
+          </div>
+
+          <!-- VR App -->
+          <div class="panel card">
+            <span class="tag">APP · META QUEST</span>
+            <div class="cover vr"><img src="assets/img/cover-vr.webp" alt="RetroGameDev VR app"></div>
+            <h3>RetroGameDev VR</h3>
+            <p>Learn retro hardware, create games, and play ROMs — hands-on in VR on Meta Quest.</p>
+            <div class="actions">
+              <a class="btn alt" href="https://www.meta.com/experiences/retrogamedev-vr/26755986344088810/" target="_blank" rel="noopener">Buy on Horizon Store</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- COMMUNITY -->
+    <section style="padding-top:0; padding-bottom:42px;">
+      <div class="wrap center">
+        <div class="panel" style="display:inline-block;">
+          <h3>Join the community</h3>
+          <p class="dim">Questions, show-and-tell, and help getting unstuck.</p>
+          <a class="btn ghost" href="https://discord.gg/6KXcdNteDQ">Join the Discord</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© <span id="yr">2026</span> RetroGameDev</span>
+    </div>
+  </footer>
+
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>

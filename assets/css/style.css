@@ -1,5 +1,5 @@
 /* ============================================================
-   RetroGameDev — "Sunny Cream" warm nostalgia theme
+   RetroGameDev: "Sunny Cream" warm nostalgia theme
    Plain CSS, no build step. Warm red + cream + aqua + golden light.
    ============================================================ */
 
@@ -166,7 +166,7 @@ a:hover { color: var(--red); }
 .site-footer .wrap { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
 .site-footer a { text-decoration: none; }
 
-/* footer email signup (EmailOctopus embed) — unscoped overrides: EO injects outside our div */
+/* footer email signup (EmailOctopus embed), unscoped overrides: EO injects outside our div */
 .eo-embed { width: 100%; max-width: 330px; }
 .emailoctopus-form-wrapper, .emailoctopus-form, .emailoctopus-form .main-form,
 .inline-container, .form-container { margin: 0 !important; padding: 0 !important; background: transparent !important; }

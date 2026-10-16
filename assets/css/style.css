@@ -126,6 +126,8 @@ a:hover { color: var(--red); }
 .grid { display: grid; gap: 20px; }
 .grid-3 { grid-template-columns: repeat(3, 1fr); }
 .grid-auto { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+/* products: wide enough for five 210px cards on one row (5*210 + 4*20 gaps + 2*22 padding) */
+#products .wrap { max-width: 1180px; }
 
 .card { display: flex; flex-direction: column; text-align: center; }
 .card .cover {
@@ -167,7 +169,7 @@ a:hover { color: var(--red); }
 .site-footer a { text-decoration: none; }
 
 /* footer email signup (EmailOctopus embed), unscoped overrides: EO injects outside our div */
-.eo-embed { width: 100%; max-width: 330px; }
+.eo-embed { width: 100%; max-width: 330px; min-width: 0; } /* min-width:0 so WebKit honours max-width (auto min-width = min-content, which beats max-width) */
 .emailoctopus-form-wrapper, .emailoctopus-form, .emailoctopus-form .main-form,
 .inline-container, .form-container { margin: 0 !important; padding: 0 !important; background: transparent !important; }
 .form-container { margin-top: 12px !important; }
@@ -190,7 +192,7 @@ a:hover { color: var(--red); }
 .emailoctopus-form [eo-form-fields-container],
 .emailoctopus-form .emailoctopus-form-row,
 .emailoctopus-form .form-group {
-  flex: 1 1 auto !important; width: 100% !important; height: 44px !important;
+  flex: 1 1 auto !important; width: 100% !important; min-width: 0 !important; height: 44px !important;
   display: flex !important; align-items: center !important; margin: 0 !important; padding: 0 !important; }
 .emailoctopus-form input.form-control, .emailoctopus-form input[type="email"],
 .emailoctopus-form input[type="submit"], .emailoctopus-form .btn-primary {
